@@ -4,6 +4,8 @@ export const site = {
   tagline: 'Tworzę nowoczesne rozwiązania internetowe, które pomagają rozwijać pomysły w świecie online.',
   description:
     'Projektuję strony internetowe, tworzę cyfrowe rozwiązania i rozwijam własne projekty. Moim celem jest łączenie estetyki, funkcjonalności oraz prostoty obsługi, aby każda strona była nie tylko ładna, ale również praktyczna.',
+  moneyNotice:
+    'PRODUKT WYKONUJĘ JA. WSZYSTKIMI SPRAWAMI ZWIĄZANYMI Z PIENIĘDZMI — PŁATNOŚCIAMI, FAKTURAMI I ROZLICZENIAMI — ZAJMUJE SIĘ MÓJ TATA.',
   social: {
     github: 'https://github.com',
     instagram: 'https://instagram.com',
@@ -23,33 +25,33 @@ export const about = {
 /** Łatwe dodawanie projektów — wystarczy dopisać obiekt do tablicy. */
 export const projects = [
   {
-    id: 'corporate-site',
-    title: 'Nowoczesna strona firmowa',
+    id: 'bielszowice-trail',
+    title: 'Bielszowice Trail',
     description:
-      'Projekt profesjonalnej strony internetowej stworzonej dla firmy. Celem było przygotowanie przejrzystej prezentacji usług oraz stworzenie wygodnej nawigacji dla klientów.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    features: ['Responsywny wygląd', 'Animacje', 'Formularz kontaktowy', 'Szybkie ładowanie'],
-    link: '#',
-    accent: 'blue',
-  },
-  {
-    id: 'ecommerce',
-    title: 'Sklep internetowy',
-    description:
-      'Projekt sklepu internetowego umożliwiającego prezentację produktów oraz wygodne zarządzanie ofertą.',
-    technologies: ['React', 'CSS', 'JavaScript'],
-    features: ['Lista produktów', 'Koszyk', 'Kategorie', 'Wyszukiwarka', 'Panel produktów'],
-    link: '#',
+      'Strona parku rowerowego MTB w Rudzie Śląskiej — prezentacja tras, poziomów trudności, wydarzeń i atmosfery miejsca. Live: bielszowicetrail.netlify.app',
+    technologies: ['React', 'Vite', 'Tailwind CSS'],
+    features: [
+      'Sekcje tras i trudności',
+      'Responsywny layout',
+      'Animacje przy scrollu',
+      'Publikacja na Netlify',
+    ],
+    link: 'https://bielszowicetrail.netlify.app',
     accent: 'green',
   },
   {
-    id: 'experimental',
-    title: 'Własny projekt eksperymentalny',
+    id: 'kadoka',
+    title: 'KADOKA',
     description:
-      'Projekt stworzony w celu testowania nowych technologii i rozwijania umiejętności programistycznych.',
-    technologies: ['React', 'Vite', 'Tailwind'],
-    features: ['Eksperymenty UI', 'Nowe API', 'Szybkie prototypowanie'],
-    link: '#',
+      'Strona firmowa usług ogrodniczych z Orzesza — oferta, realizacje, opinie i kontakt. Live: kadoka.netlify.app',
+    technologies: ['React', 'Vite', 'Tailwind CSS'],
+    features: [
+      'Pełnoekranowy hero',
+      'Oferta usług',
+      'Portfolio realizacji',
+      'Sekcja kontaktu',
+    ],
+    link: 'https://kadoka.netlify.app',
     accent: 'blue',
   },
 ]

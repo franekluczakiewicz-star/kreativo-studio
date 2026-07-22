@@ -1,3 +1,4 @@
+import { site } from '../data/content'
 import { useCart } from '../context/CartContext'
 
 function formatPrice(value) {
@@ -78,6 +79,9 @@ export default function CartDrawer() {
         </div>
 
         <div className="border-t border-white/8 px-5 py-5">
+          <p className="mb-4 font-mono text-[10px] font-semibold leading-relaxed tracking-[0.06em] text-frost-300">
+            {site.moneyNotice}
+          </p>
           <div className="mb-4 flex items-center justify-between">
             <span className="text-sm text-frost-300">Suma</span>
             <span className="font-display text-xl font-semibold text-frost-50">{formatPrice(total)}</span>

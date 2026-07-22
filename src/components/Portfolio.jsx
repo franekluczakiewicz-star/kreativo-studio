@@ -46,6 +46,8 @@ function ProjectCard({ project, index }) {
 
       <a
         href={project.link}
+        target="_blank"
+        rel="noreferrer"
         className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-signal-blue transition group-hover:gap-3"
       >
         Zobacz projekt
@@ -67,7 +69,7 @@ export default function Portfolio() {
             Portfolio
           </h2>
           <p className="mt-4 text-frost-300">
-            Wybrane realizacje — każda jako osobna karta. Nowe projekty dodajesz w pliku danych.
+            Wybrane realizacje live — m.in. Bielszowice Trail i KADOKA.
           </p>
         </div>
 

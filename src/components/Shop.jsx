@@ -1,4 +1,4 @@
-import { shopCategories } from '../data/content'
+import { shopCategories, site } from '../data/content'
 import { useCart } from '../context/CartContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -58,6 +58,9 @@ export default function Shop() {
           </h2>
           <p className="mt-4 text-frost-300">
             Produkty cyfrowe i usługi — od gotowych szablonów po kompleksowe strony internetowe.
+          </p>
+          <p className="mt-6 border border-signal-blue/30 bg-signal-blue/10 px-4 py-3 font-mono text-[11px] font-semibold leading-relaxed tracking-[0.06em] text-frost-50 sm:text-xs">
+            {site.moneyNotice}
           </p>
         </div>
 
