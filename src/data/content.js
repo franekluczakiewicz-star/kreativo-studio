@@ -69,17 +69,3 @@ export const shopCategoryOptions = [
 /** Domyślnie pusto — oferty zarządzane przez admina. */
 export const defaultProducts = []
 
-export const testimonials = [
-  {
-    id: 1,
-    rating: 5,
-    text: 'Bardzo dobra komunikacja i profesjonalne podejście. Strona wygląda nowocześnie i działa bardzo szybko.',
-    author: 'Klient',
-  },
-  {
-    id: 2,
-    rating: 5,
-    text: 'Projekt został wykonany zgodnie z oczekiwaniami. Wszystko działa poprawnie.',
-    author: 'Klient',
-  },
-]

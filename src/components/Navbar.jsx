@@ -1,19 +1,16 @@
 import { useEffect, useState } from 'react'
 import { site } from '../data/content'
-import { useCart } from '../context/CartContext'
 
 const links = [
   { href: '#o-mnie', label: 'O mnie' },
   { href: '#portfolio', label: 'Portfolio' },
   { href: '#sklep', label: 'Sklep' },
-  { href: '#opinie', label: 'Opinie' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const { count, setOpen } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -46,19 +43,12 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="relative rounded-md border border-white/10 px-3 py-2 text-sm text-frost-100 transition hover:border-white/25"
-            aria-label="Otwórz koszyk"
+          <a
+            href="#kontakt"
+            className="hidden rounded-md border border-white/10 px-3 py-2 text-sm text-frost-100 transition hover:border-white/25 sm:inline-flex"
           >
-            Koszyk
-            {count > 0 && (
-              <span className="ml-2 inline-flex h-5 min-w-5 items-center justify-center rounded bg-signal-green px-1 text-xs font-semibold text-ink-950">
-                {count}
-              </span>
-            )}
-          </button>
+            Kontakt
+          </a>
 
           <button
             type="button"

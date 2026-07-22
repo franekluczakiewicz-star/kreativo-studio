@@ -1,15 +1,12 @@
 import { useEffect, useState } from 'react'
-import { CartProvider } from './context/CartContext'
 import { ShopProvider } from './context/ShopContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
 import Shop from './components/Shop'
-import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import CartDrawer from './components/CartDrawer'
 import Admin from './components/Admin'
 
 function getRoute() {
@@ -26,11 +23,9 @@ function PublicSite() {
         <About />
         <Portfolio />
         <Shop />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />
-      <CartDrawer />
     </div>
   )
 }
@@ -44,9 +39,5 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  return (
-    <ShopProvider>
-      <CartProvider>{route.startsWith('/admin') ? <Admin /> : <PublicSite />}</CartProvider>
-    </ShopProvider>
-  )
+  return <ShopProvider>{route.startsWith('/admin') ? <Admin /> : <PublicSite />}</ShopProvider>
 }

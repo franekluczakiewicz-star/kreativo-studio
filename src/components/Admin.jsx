@@ -7,6 +7,7 @@ const emptyForm = {
   price: '',
   description: '',
   includes: '',
+  link: '',
   categoryId: shopCategoryOptions[0]?.id || 'other',
   featured: false,
 }
@@ -40,6 +41,7 @@ export default function Admin() {
       price: String(product.price),
       description: product.description,
       includes: (product.includes || []).join('\n'),
+      link: product.link || '',
       categoryId: product.categoryId || 'other',
       featured: Boolean(product.featured),
     })
@@ -66,6 +68,7 @@ export default function Admin() {
         .split('\n')
         .map((line) => line.trim())
         .filter(Boolean),
+      link: form.link.trim(),
       categoryId: form.categoryId,
       featured: form.featured,
     }
@@ -198,6 +201,20 @@ export default function Admin() {
             </label>
 
             <label className="block">
+              <span className="mb-1.5 block text-xs text-frost-300">Link do produktu</span>
+              <input
+                className="field"
+                type="url"
+                placeholder="https://przyklad.netlify.app"
+                value={form.link}
+                onChange={(e) => setForm((f) => ({ ...f, link: e.target.value }))}
+              />
+              <span className="mt-1.5 block text-xs text-frost-300/70">
+                Na stronie nie da się kupić produktu — link tylko do podglądu / realizacji.
+              </span>
+            </label>
+
+            <label className="block">
               <span className="mb-1.5 block text-xs text-frost-300">
                 Co zawiera (każda linia = jeden punkt)
               </span>
@@ -263,6 +280,16 @@ export default function Admin() {
                           {category?.name || 'Inne'}
                           {product.featured ? ' · Polecany' : ''}
                         </p>
+                        {product.link && (
+                          <a
+                            href={product.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 inline-block break-all text-xs text-signal-blue hover:underline"
+                          >
+                            {product.link}
+                          </a>
+                        )}
                       </div>
                       <div className="flex gap-2">
                         <button

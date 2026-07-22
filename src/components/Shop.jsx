@@ -1,5 +1,4 @@
 import { site } from '../data/content'
-import { useCart } from '../context/CartContext'
 import { useShop } from '../context/ShopContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -11,7 +10,17 @@ function formatPrice(value) {
   }).format(value)
 }
 
-function ProductCard({ product, onAdd }) {
+function normalizeUrl(url) {
+  if (!url) return ''
+  const trimmed = url.trim()
+  if (!trimmed) return ''
+  if (/^https?:\/\//i.test(trimmed)) return trimmed
+  return `https://${trimmed}`
+}
+
+function ProductCard({ product }) {
+  const href = normalizeUrl(product.link)
+
   return (
     <article
       className={`flex h-full flex-col border p-6 transition duration-300 sm:p-7 ${
@@ -40,16 +49,31 @@ function ProductCard({ product, onAdd }) {
           ))}
         </ul>
       )}
-      <button type="button" onClick={() => onAdd(product)} className="btn-primary mt-7 w-full">
-        Dodaj do koszyka
-      </button>
+
+      <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.14em] text-frost-300/60">
+        Niedostępne do zakupu online
+      </p>
+
+      {href ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="btn-primary mt-3 w-full"
+        >
+          Zobacz produkt
+        </a>
+      ) : (
+        <a href="#kontakt" className="btn-ghost mt-3 w-full">
+          Zapytaj o ofertę
+        </a>
+      )}
     </article>
   )
 }
 
 export default function Shop() {
   const ref = useScrollReveal()
-  const { addItem } = useCart()
   const { productsByCategory, products } = useShop()
 
   return (
@@ -61,7 +85,8 @@ export default function Shop() {
             Sklep
           </h2>
           <p className="mt-4 text-frost-300">
-            Produkty cyfrowe i usługi — oferty dodawane przez administratora.
+            Podgląd ofert z linkami do realizacji. Na tej stronie nie da się kupić produktów —
+            zakupy i płatności ustalamy poza sklepem.
           </p>
           <p className="mt-6 border border-signal-blue/30 bg-signal-blue/10 px-4 py-3 font-mono text-[11px] font-semibold leading-relaxed tracking-[0.06em] text-frost-50 sm:text-xs">
             {site.moneyNotice}
@@ -87,7 +112,7 @@ export default function Shop() {
                 </h3>
                 <div className="grid gap-5 md:grid-cols-2">
                   {category.products.map((product) => (
-                    <ProductCard key={product.id} product={product} onAdd={addItem} />
+                    <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
               </div>
