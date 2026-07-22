@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink-950: #05070d;
+  --ink-900: #0a0f1c;
+  --signal-blue: #3d8bfd;
+  --signal-green: #2fd4a2;
+  --frost: #f4f7fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--frost);
+  background: var(--ink-950);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(61, 139, 253, 0.35);
+  color: #fff;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section-pad {
+    @apply py-24 sm:py-32;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-signal-blue px-6 py-3 text-sm font-medium text-white transition duration-300 hover:bg-[#5a9fff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal-blue;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-frost-50 transition duration-300 hover:border-white/30 hover:bg-white/[0.06] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/40;
+  }
+
+  .field {
+    @apply w-full rounded-md border border-white/10 bg-ink-900/80 px-4 py-3 text-sm text-frost-50 placeholder:text-frost-300/50 outline-none transition focus:border-signal-blue/60 focus:ring-1 focus:ring-signal-blue/40;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-mesh {
+  background-color: #05070d;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(61, 139, 253, 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(47, 212, 162, 0.12), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(61, 139, 253, 0.08), transparent 55%),
+    linear-gradient(180deg, #05070d 0%, #0a0f1c 45%, #05070d 100%);
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
