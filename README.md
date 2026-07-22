@@ -1,6 +1,6 @@
 # Kreativo Studio
 
-Nowoczesna strona portfolio + sklep internetowy.
+Nowoczesna strona portfolio + sklep internetowy z panelem administratora.
 
 ## Uruchomienie
 
@@ -9,14 +9,24 @@ npm install
 npm run dev
 ```
 
-## Edycja treści
+## Panel admina
 
-Wszystkie treści (projekty, produkty, opinie, dane kontaktowe) znajdują się w:
+Adres: `/#/admin`
 
-`src/data/content.js`
+Hasło domyślne: `kreativo2026`  
+(zmienisz w `src/data/content.js` → `ADMIN_PASSWORD`)
 
-Dodawanie projektu = nowy obiekt w tablicy `projects`.  
-Dodawanie produktu = nowy obiekt w odpowiedniej kategorii w `shopCategories`.
+W panelu możesz:
+- dodawać produkty
+- edytować opisy i ceny
+- usuwać oferty
+- wybierać kategorię
+
+Produkty zapisują się w przeglądarce (localStorage).
+
+## Edycja treści strony
+
+Portfolio, opinie i dane kontaktowe: `src/data/content.js`
 
 ## Stack
 

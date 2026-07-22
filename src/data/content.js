@@ -13,6 +13,9 @@ export const site = {
   },
 }
 
+/** Hasło do panelu admina: /#/admin — zmień na własne. */
+export const ADMIN_PASSWORD = 'kreativo2026'
+
 export const about = {
   title: 'O mnie',
   paragraphs: [
@@ -56,63 +59,15 @@ export const projects = [
   },
 ]
 
-/** Produkty sklepu — kategorie + oferty. Ceny w PLN. */
-export const shopCategories = [
-  {
-    id: 'websites',
-    name: 'Strony internetowe',
-    products: [
-      {
-        id: 'starter',
-        name: 'Pakiet Starter',
-        price: 1499,
-        description:
-          'Podstawowa strona internetowa dla osób, które chcą rozpocząć swoją obecność w internecie.',
-        includes: [
-          'Projekt strony głównej',
-          'Podstawowe podstrony',
-          'Dostosowanie do telefonu',
-          'Konfiguracja publikacji',
-        ],
-      },
-      {
-        id: 'professional',
-        name: 'Pakiet Professional',
-        price: 3499,
-        description:
-          'Rozbudowana strona internetowa dla firm i marek, które potrzebują profesjonalnej prezentacji.',
-        includes: [
-          'Indywidualny projekt',
-          'Dodatkowe funkcje',
-          'Animacje',
-          'Optymalizacja',
-        ],
-        featured: true,
-      },
-    ],
-  },
-  {
-    id: 'templates',
-    name: 'Szablony stron',
-    products: [
-      {
-        id: 'template-portfolio',
-        name: 'Szablon Portfolio',
-        price: 249,
-        description:
-          'Gotowy projekt strony portfolio dla twórców, freelancerów i osób chcących pokazać swoje projekty.',
-        includes: ['Responsywny layout', 'Sekcje portfolio', 'Formularz kontaktowy'],
-      },
-      {
-        id: 'template-business',
-        name: 'Szablon Firmowy',
-        price: 299,
-        description: 'Nowoczesny wygląd strony dla małych firm i usługodawców.',
-        includes: ['Strona usług', 'O firmie', 'CTA i kontakt'],
-      },
-    ],
-  },
+/** Kategorie sklepu — produkty dodajesz w panelu admina (/#/admin). */
+export const shopCategoryOptions = [
+  { id: 'websites', name: 'Strony internetowe' },
+  { id: 'templates', name: 'Szablony stron' },
+  { id: 'other', name: 'Inne' },
 ]
+
+/** Domyślnie pusto — oferty zarządzane przez admina. */
+export const defaultProducts = []
 
 export const testimonials = [
   {

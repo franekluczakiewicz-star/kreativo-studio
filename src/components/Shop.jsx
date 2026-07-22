@@ -1,5 +1,6 @@
-import { shopCategories, site } from '../data/content'
+import { site } from '../data/content'
 import { useCart } from '../context/CartContext'
+import { useShop } from '../context/ShopContext'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function formatPrice(value) {
@@ -29,14 +30,16 @@ function ProductCard({ product, onAdd }) {
         <p className="shrink-0 font-display text-lg font-semibold text-signal-blue">{formatPrice(product.price)}</p>
       </div>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-frost-300">{product.description}</p>
-      <ul className="mt-5 space-y-2">
-        {product.includes.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm text-frost-200">
-            <span className="mt-1.5 h-1 w-1 shrink-0 bg-signal-blue" />
-            {item}
-          </li>
-        ))}
-      </ul>
+      {(product.includes || []).length > 0 && (
+        <ul className="mt-5 space-y-2">
+          {product.includes.map((item) => (
+            <li key={item} className="flex items-start gap-2 text-sm text-frost-200">
+              <span className="mt-1.5 h-1 w-1 shrink-0 bg-signal-blue" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
       <button type="button" onClick={() => onAdd(product)} className="btn-primary mt-7 w-full">
         Dodaj do koszyka
       </button>
@@ -47,6 +50,7 @@ function ProductCard({ product, onAdd }) {
 export default function Shop() {
   const ref = useScrollReveal()
   const { addItem } = useCart()
+  const { productsByCategory, products } = useShop()
 
   return (
     <section id="sklep" className="section-pad border-t border-white/5">
@@ -57,27 +61,39 @@ export default function Shop() {
             Sklep
           </h2>
           <p className="mt-4 text-frost-300">
-            Produkty cyfrowe i usługi — od gotowych szablonów po kompleksowe strony internetowe.
+            Produkty cyfrowe i usługi — oferty dodawane przez administratora.
           </p>
           <p className="mt-6 border border-signal-blue/30 bg-signal-blue/10 px-4 py-3 font-mono text-[11px] font-semibold leading-relaxed tracking-[0.06em] text-frost-50 sm:text-xs">
             {site.moneyNotice}
           </p>
         </div>
 
-        <div className="space-y-16">
-          {shopCategories.map((category) => (
-            <div key={category.id}>
-              <h3 className="mb-6 font-display text-2xl font-semibold tracking-tight text-frost-50">
-                {category.name}
-              </h3>
-              <div className="grid gap-5 md:grid-cols-2">
-                {category.products.map((product) => (
-                  <ProductCard key={product.id} product={product} onAdd={addItem} />
-                ))}
+        {products.length === 0 ? (
+          <div className="border border-dashed border-white/15 px-6 py-14 text-center">
+            <p className="font-display text-xl font-semibold text-frost-50">Brak produktów</p>
+            <p className="mx-auto mt-3 max-w-md text-sm text-frost-300">
+              Sklep jest pusty. Zaloguj się do panelu admina, aby dodać pierwszą ofertę.
+            </p>
+            <a href="#/admin" className="btn-primary mt-6 inline-flex">
+              Panel administratora
+            </a>
+          </div>
+        ) : (
+          <div className="space-y-16">
+            {productsByCategory.map((category) => (
+              <div key={category.id}>
+                <h3 className="mb-6 font-display text-2xl font-semibold tracking-tight text-frost-50">
+                  {category.name}
+                </h3>
+                <div className="grid gap-5 md:grid-cols-2">
+                  {category.products.map((product) => (
+                    <ProductCard key={product.id} product={product} onAdd={addItem} />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )
