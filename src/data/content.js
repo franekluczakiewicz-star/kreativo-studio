@@ -14,7 +14,7 @@ export const site = {
 }
 
 /** Hasło do panelu admina: /#/admin — zmień na własne. */
-export const ADMIN_PASSWORD = 'kreativo2026'
+export const ADMIN_PASSWORD = 'FranekKita2012!'
 
 export const about = {
   title: 'O mnie',

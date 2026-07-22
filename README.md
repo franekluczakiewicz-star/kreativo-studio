@@ -13,8 +13,7 @@ npm run dev
 
 Adres: `/#/admin`
 
-Hasło domyślne: `kreativo2026`  
-(zmienisz w `src/data/content.js` → `ADMIN_PASSWORD`)
+Hasło ustawiasz w `src/data/content.js` → `ADMIN_PASSWORD`
 
 W panelu możesz:
 - dodawać produkty
