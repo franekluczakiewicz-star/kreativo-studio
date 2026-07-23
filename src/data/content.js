@@ -1,16 +1,11 @@
 export const site = {
   name: 'Kreativo Studio',
-  email: 'kontakt@kreativostudio.pl',
+  email: 'franek.luczakiewicz@gmail.com',
   tagline: 'Tworzę nowoczesne rozwiązania internetowe, które pomagają rozwijać pomysły w świecie online.',
   description:
     'Projektuję strony internetowe, tworzę cyfrowe rozwiązania i rozwijam własne projekty. Moim celem jest łączenie estetyki, funkcjonalności oraz prostoty obsługi, aby każda strona była nie tylko ładna, ale również praktyczna.',
   moneyNotice:
     'PRODUKT WYKONUJĘ JA. WSZYSTKIMI SPRAWAMI ZWIĄZANYMI Z PIENIĘDZMI — PŁATNOŚCIAMI, FAKTURAMI I ROZLICZENIAMI — ZAJMUJE SIĘ MÓJ TATA.',
-  social: {
-    github: 'https://github.com',
-    instagram: 'https://instagram.com',
-    linkedin: 'https://linkedin.com',
-  },
 }
 
 /** Hasło do panelu admina: /#/admin — zmień na własne. */

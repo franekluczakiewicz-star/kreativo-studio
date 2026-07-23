@@ -45,38 +45,6 @@ export default function Contact() {
                   {site.email}
                 </a>
               </div>
-
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-frost-300/50">
-                  Social
-                </p>
-                <div className="mt-3 flex flex-wrap gap-4">
-                  <a
-                    href={site.social.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-frost-200 transition hover:text-frost-50"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href={site.social.instagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-frost-200 transition hover:text-frost-50"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href={site.social.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-frost-200 transition hover:text-frost-50"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 
