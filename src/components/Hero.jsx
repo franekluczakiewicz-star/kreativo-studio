@@ -90,8 +90,8 @@ export default function Hero() {
             <a href="#portfolio" className="btn-primary">
               Zobacz portfolio
             </a>
-            <a href="#sklep" className="btn-ghost">
-              Przejdź do sklepu
+            <a href="#kontakt" className="btn-ghost">
+              Skontaktuj się
             </a>
           </div>
         </div>

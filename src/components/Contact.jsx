@@ -25,7 +25,7 @@ export default function Contact() {
       <div className="container-page">
         <div ref={ref} className="reveal grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.22em] text-signal-green">04</p>
+            <p className="font-mono text-xs uppercase tracking-[0.22em] text-signal-green">03</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-frost-50 sm:text-4xl">
               Kontakt
             </h2>

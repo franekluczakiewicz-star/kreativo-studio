@@ -8,9 +8,6 @@ export const site = {
     'PRODUKT WYKONUJĘ JA. WSZYSTKIMI SPRAWAMI ZWIĄZANYMI Z PIENIĘDZMI — PŁATNOŚCIAMI, FAKTURAMI I ROZLICZENIAMI — ZAJMUJE SIĘ MÓJ TATA.',
 }
 
-/** Hasło do panelu admina: /#/admin — zmień na własne. */
-export const ADMIN_PASSWORD = 'FranekKita2012!'
-
 export const about = {
   title: 'O mnie',
   paragraphs: [
@@ -53,14 +50,3 @@ export const projects = [
     accent: 'blue',
   },
 ]
-
-/** Kategorie sklepu — produkty dodajesz w panelu admina (/#/admin). */
-export const shopCategoryOptions = [
-  { id: 'websites', name: 'Strony internetowe' },
-  { id: 'templates', name: 'Szablony stron' },
-  { id: 'other', name: 'Inne' },
-]
-
-/** Domyślnie pusto — oferty zarządzane przez admina. */
-export const defaultProducts = []
-

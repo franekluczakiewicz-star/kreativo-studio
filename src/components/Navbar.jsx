@@ -4,7 +4,6 @@ import { site } from '../data/content'
 const links = [
   { href: '#o-mnie', label: 'O mnie' },
   { href: '#portfolio', label: 'Portfolio' },
-  { href: '#sklep', label: 'Sklep' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
 

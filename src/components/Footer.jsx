@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="text-signal-blue">Kreativo</span> Studio
             </p>
             <p className="mt-1 text-sm text-frost-300/70">
-              Portfolio · sklep · rozwiązania cyfrowe
+              Portfolio · rozwiązania cyfrowe
             </p>
           </div>
 
@@ -24,8 +24,8 @@ export default function Footer() {
             <a href="#portfolio" className="hover:text-frost-50">
               Portfolio
             </a>
-            <a href="#sklep" className="hover:text-frost-50">
-              Sklep
+            <a href="#kontakt" className="hover:text-frost-50">
+              Kontakt
             </a>
             <a href={`mailto:${site.email}`} className="hover:text-frost-50">
               {site.email}
