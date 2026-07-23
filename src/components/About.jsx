@@ -12,7 +12,6 @@ export default function About() {
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-frost-50 sm:text-4xl">
             {about.title}
           </h2>
-          <div className="mt-5 h-px w-16 origin-left bg-gradient-to-r from-signal-blue to-signal-green" />
         </div>
 
         <div className="space-y-5 text-base leading-relaxed text-frost-300 sm:text-lg">
