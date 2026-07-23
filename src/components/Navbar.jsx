@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-import { site } from '../data/content'
 
 const links = [
   { href: '#o-mnie', label: 'O mnie' },
   { href: '#portfolio', label: 'Portfolio' },
-  { href: '#kontakt', label: 'Kontakt' },
 ]
 
 export default function Navbar() {
@@ -41,24 +39,15 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <a
-            href="#kontakt"
-            className="hidden rounded-md border border-white/10 px-3 py-2 text-sm text-frost-100 transition hover:border-white/25 sm:inline-flex"
-          >
-            Kontakt
-          </a>
-
-          <button
-            type="button"
-            className="rounded-md border border-white/10 p-2 md:hidden"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Menu"
-          >
-            <span className="block h-0.5 w-5 bg-frost-50" />
-            <span className="mt-1.5 block h-0.5 w-5 bg-frost-50" />
-          </button>
-        </div>
+        <button
+          type="button"
+          className="rounded-md border border-white/10 p-2 md:hidden"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Menu"
+        >
+          <span className="block h-0.5 w-5 bg-frost-50" />
+          <span className="mt-1.5 block h-0.5 w-5 bg-frost-50" />
+        </button>
       </div>
 
       {menuOpen && (
@@ -74,7 +63,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <p className="mt-2 px-2 text-xs text-frost-300/70">{site.email}</p>
           </nav>
         </div>
       )}

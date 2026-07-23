@@ -4,8 +4,6 @@ export const site = {
   tagline: 'Tworzę nowoczesne rozwiązania internetowe, które pomagają rozwijać pomysły w świecie online.',
   description:
     'Projektuję strony internetowe, tworzę cyfrowe rozwiązania i rozwijam własne projekty. Moim celem jest łączenie estetyki, funkcjonalności oraz prostoty obsługi, aby każda strona była nie tylko ładna, ale również praktyczna.',
-  moneyNotice:
-    'PRODUKT WYKONUJĘ JA. WSZYSTKIMI SPRAWAMI ZWIĄZANYMI Z PIENIĘDZMI — PŁATNOŚCIAMI, FAKTURAMI I ROZLICZENIAMI — ZAJMUJE SIĘ MÓJ TATA.',
 }
 
 export const about = {
