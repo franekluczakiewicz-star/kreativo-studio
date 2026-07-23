@@ -10,6 +10,7 @@ export const about = {
   title: 'O mnie',
   paragraphs: [
     'Cześć! Jestem młodym twórcą zainteresowanym technologią, programowaniem i projektowaniem stron internetowych. Od początku interesowało mnie tworzenie własnych projektów i rozwijanie umiejętności związanych z nowoczesnymi technologiami.',
+    'Poza programowaniem bardzo lubię jeździć na rowerze i grać w piłkę — sport daje mi energię, dystans i motywację do dalszej pracy nad projektami.',
     'Każdy projekt traktuję jako możliwość nauki oraz stworzenia czegoś wyjątkowego. Skupiam się na tym, aby moje realizacje były przejrzyste, szybkie i dopasowane do potrzeb użytkowników.',
     'Tworzę projekty od podstaw — od pierwszego pomysłu, przez wygląd strony, aż po gotowe rozwiązanie działające w internecie.',
   ],
