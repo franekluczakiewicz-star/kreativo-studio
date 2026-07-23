@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Kreativo Studio',
+  name: 'Franciszek Łuczakiewicz',
   email: 'franek.luczakiewicz@gmail.com',
   tagline: 'Tworzę nowoczesne rozwiązania internetowe, które pomagają rozwijać pomysły w świecie online.',
   description:

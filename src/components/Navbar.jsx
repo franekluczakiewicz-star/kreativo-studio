@@ -23,8 +23,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between sm:h-20">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight text-frost-50 sm:text-xl">
-          <span className="text-signal-blue">Kreativo</span> Studio
+        <a href="#top" className="font-display text-base font-bold tracking-tight text-frost-50 sm:text-lg">
+          <span className="text-signal-blue">Franciszek</span> Łuczakiewicz
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

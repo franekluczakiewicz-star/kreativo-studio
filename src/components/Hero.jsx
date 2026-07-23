@@ -9,7 +9,7 @@ function HeroVisual() {
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
           <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-          <span className="ml-3 font-mono text-[11px] text-frost-300/70">kreativo — index.jsx</span>
+          <span className="ml-3 font-mono text-[11px] text-frost-300/70">franciszek — index.jsx</span>
         </div>
 
         <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
@@ -32,7 +32,7 @@ function HeroVisual() {
           <div className="border-t border-white/8 bg-gradient-to-br from-ink-800 to-ink-950 p-5 lg:border-l lg:border-t-0">
             <div className="mb-4 flex items-center justify-between">
               <div className="font-display text-sm font-semibold tracking-tight">
-                <span className="text-signal-blue">K</span>reativo
+                <span className="text-signal-blue">F</span>Ł
               </div>
               <div className="h-1.5 w-10 rounded bg-signal-green/80" />
             </div>
@@ -63,10 +63,10 @@ export default function Hero() {
       <div className="container-page relative grid min-h-[calc(100svh-7rem)] items-center gap-12 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="max-w-xl">
           <p
-            className="mb-5 font-display text-2xl font-bold tracking-tight text-frost-50 opacity-0 animate-fade-up sm:text-3xl"
+            className="mb-5 font-display text-2xl font-bold tracking-tight text-frost-50 opacity-0 animate-fade-up sm:text-3xl lg:text-4xl"
             style={{ animationDelay: '0.05s', animationFillMode: 'forwards' }}
           >
-            <span className="text-signal-blue">Kreativo</span> Studio
+            <span className="text-signal-blue">Franciszek</span> Łuczakiewicz
           </p>
 
           <h1

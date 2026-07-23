@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container-page flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-display text-lg font-semibold tracking-tight">
-            <span className="text-signal-blue">Kreativo</span> Studio
+            <span className="text-signal-blue">Franciszek</span> Łuczakiewicz
           </p>
           <p className="mt-1 text-sm text-frost-300/70">Portfolio · rozwiązania cyfrowe</p>
         </div>
